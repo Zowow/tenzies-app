@@ -12,6 +12,8 @@ body {
   background: #2d4157;
 }
 
+
+/* Die Component */
 main {
   height: 550px;
   max-width: 550px;
@@ -20,10 +22,10 @@ main {
   filter: drop-shadow(1px 2px 4px #000);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: #F5F5F5;
-  padding: 35px;
+  padding: 40px;
 }
 
 .dice-container {
@@ -33,7 +35,7 @@ main {
   gap: 40px;
 }
 
-.dice {
+.dices {
   display: flex;
   justify-content: center; /* Centers items horizontally */
   align-items: center; /* Centers items vertically */
@@ -41,16 +43,11 @@ main {
   width: 50px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 3.81277px;
-}
-
-.dice-num {
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 1.5rem;
+  cursor: pointer;
 }
 
 .roll {
-  width: 120px;
+  min-width: 120px;
   height: 50px;
   padding: 6px 20px;
   background: #5035FF;
@@ -66,6 +63,8 @@ main {
 .roll:active{
   box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.3) inset;
 }
+
+
 
 .header > h1 {
   font-weight: 700;
@@ -85,4 +84,75 @@ main {
   letter-spacing: -0.03em;
   color: #4A4E74;
   padding: 0 30px;
+}
+
+.dice-setup{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.dice-setup > span {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #4A4E74;
+}
+
+/* Dice Face */
+.dice {  
+  padding: 4px;  
+  width: 50px;  
+  height: 50px;  
+  border-radius: 10%;
+}
+
+.dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color:black;
+  }
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face{
+  display: flex;
+  justify-content : space-between;
+  }
+
+.second-face .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.third-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-face .dot:nth-of-type(1) {
+  align-self :flex-end;
+}
+
+.third-face .dot:nth-of-type(2) {
+  align-self :center;
+}
+
+.fourth-face , .sixth-face, .fifth-face{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-face .column , .sixth-face .column, .fifth-face .column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+  justify-content: center;
 }
